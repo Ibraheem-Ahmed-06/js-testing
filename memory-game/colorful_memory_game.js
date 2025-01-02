@@ -128,3 +128,4 @@ function handleGameTimer () {
 // Event listener for startBtn
 startBtn.addEventListener("click", startGame);
 
+console.log("Hello");
