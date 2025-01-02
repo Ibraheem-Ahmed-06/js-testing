@@ -128,5 +128,3 @@ function handleGameTimer () {
 // Event listener for startBtn
 startBtn.addEventListener("click", startGame);
 
-alert("Testing...");
-
