@@ -7,7 +7,7 @@ let score = 0,
 // Colosr to be used and total deck of cards
 // Card deck should have 4 * 6 = 24 items
 let colors = "red,green,blue,orange,purple,pink".split(",");
-let cards = duplicateArray(colors, 4);
+let cards;
 
 // To be used to track cards that are selected
 let selectedCards = [];
@@ -103,8 +103,8 @@ function startGame () {
     // Creates cards from scratch
     cards = duplicateArray(colors, 4);
     selectedCards = [];
-    generateCards();
-
+    generateCards(cards);
+    
     // Handles clicks
     gameContainer.addEventListener('click', handleCardClick);
 }
