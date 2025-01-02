@@ -104,7 +104,10 @@ function startGame () {
     cards = duplicateArray(colors, 4);
     selectedCards = [];
     generateCards(cards);
-    
+
+    // Handles game timer
+    handleGameTimer();
+
     // Handles clicks
     gameContainer.addEventListener('click', handleCardClick);
 }
