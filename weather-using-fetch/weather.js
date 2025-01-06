@@ -15,6 +15,12 @@ function updateWeatherData (event) {
             <p>Temperature: ${(data.main.temp - 273.15).toFixed(2)} &#8451;</p>
             <p>Weather: ${data.weather[0].description}</p>`;
         })
+        .catch((error) => {
+            console.error("Error fetching weather:", error);
+
+            const weatherInfoEl = document.getElementById("weatherInfo");
+            weatherInfoEl.innerHTML = "<p>Failed to fetch weather. Please try again.</p>";
+        })
 }
 
 document.getElementById('weatherForm').addEventListener('submit', updateWeatherData);
